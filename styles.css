@@ -498,23 +498,131 @@ body {
   border: 1px solid var(--border-subtle);
 }
 
-/* Cards Grid (Games) */
-.cards-grid {
+/* Games Section Groups */
+.games-group {
+  margin-top: 36px;
+}
+
+.games-group.group-expansion {
+  margin-top: 52px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.group-header {
+  margin-bottom: 22px;
+}
+
+.group-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.group-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.group-caption {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.status-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-active {
+  background-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.dot-forming {
+  background-color: var(--cchs-blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+}
+
+.group-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.pill-active {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.pill-forming {
+  background-color: var(--cchs-blue-tint);
+  color: var(--cchs-blue);
+  border: 1px solid var(--cchs-blue-border);
+}
+
+/* Roster Requirement Notice Banner */
+.roster-notice-banner {
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: rgba(0, 113, 227, 0.04);
+  border: 1px solid var(--cchs-blue-border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.notice-icon {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.notice-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.notice-text strong {
+  color: var(--text-main);
+}
+
+/* 3-Column Grid for Active Teams */
+.cards-grid-3 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
   align-items: stretch;
 }
 
-@media (max-width: 1024px) {
-  .cards-grid {
+/* 2-Column Grid for Expansion Teams */
+.cards-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .cards-grid-3 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 }
 
-@media (max-width: 600px) {
-  .cards-grid {
+@media (max-width: 640px) {
+  .cards-grid-3,
+  .cards-grid-2 {
     grid-template-columns: 1fr;
     gap: 18px;
   }

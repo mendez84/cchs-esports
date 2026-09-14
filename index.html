@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=2.2">
+  <link rel="stylesheet" href="styles.css?v=2.3">
 </head>
 <body class="theme-light">
 
@@ -188,124 +188,186 @@
           <p class="section-desc">Currently competing in core titles, with expansion rosters forming based on student interest.</p>
         </div>
 
-        <div class="cards-grid">
-          
-          <!-- Game 1: Smash -->
-          <article class="apple-card" tabindex="0">
-            <div class="card-media">
-              <img 
-                src="assets/game-smash.jpg" 
-                alt="Super Smash Bros. Ultimate battle artwork featuring iconic fighters" 
-                class="card-img" 
-                width="800" 
-                height="450" 
-                loading="lazy"
-              >
-              <div class="card-media-shine" aria-hidden="true"></div>
+        <!-- Group 1: Active League Teams -->
+        <div class="games-group">
+          <div class="group-header">
+            <div class="group-title-wrap">
+              <span class="status-indicator-dot dot-active" aria-hidden="true"></span>
+              <h3 class="group-title">Active Competition Teams</h3>
+              <span class="group-pill pill-active">Officially Competing</span>
             </div>
-            <div class="card-body">
-              <div class="card-top">
-                <span class="badge-platform">Nintendo Switch</span>
-                <span class="card-status active-status">Active Team</span>
-              </div>
-              <h3 class="card-title">Super Smash Bros. Ultimate</h3>
-              <p class="card-description">
-                1v1 singles and 3v3 crew battle formats. Multiple dedicated Switch stations in Room 315 for friendlies, neutral training, and tournament play.
-              </p>
-              <div class="card-meta">
-                <span class="meta-label">Format:</span>
-                <span class="meta-val">1v1 & Crew • Switch</span>
-              </div>
-            </div>
-          </article>
+            <p class="group-caption">Active varsity rosters currently training and scrimmaging in Room 315.</p>
+          </div>
 
-          <!-- Game 2: Rocket League -->
-          <article class="apple-card" tabindex="0">
-            <div class="card-media">
-              <img 
-                src="assets/game-rocketleague.jpg" 
-                alt="Rocket League rocket-powered cars in an aerial soccer match" 
-                class="card-img" 
-                width="800" 
-                height="450" 
-                loading="lazy"
-              >
-              <div class="card-media-shine" aria-hidden="true"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-top">
-                <span class="badge-platform">Cross-Platform</span>
-                <span class="card-status active-status">Active Team</span>
+          <div class="cards-grid-3">
+            
+            <!-- Game 1: Smash -->
+            <article class="apple-card" tabindex="0">
+              <div class="card-media">
+                <img 
+                  src="assets/game-smash.jpg" 
+                  alt="Super Smash Bros. Ultimate official key art with Mario, Link, Pikachu, and battle roster" 
+                  class="card-img" 
+                  width="960" 
+                  height="540" 
+                  loading="lazy"
+                >
+                <div class="card-media-shine" aria-hidden="true"></div>
               </div>
-              <h3 class="card-title">Rocket League</h3>
-              <p class="card-description">
-                Fast-paced 3v3 vehicular soccer. Aerial mechanics, rapid rotations, boost control, and coordinated team communication.
-              </p>
-              <div class="card-meta">
-                <span class="meta-label">Format:</span>
-                <span class="meta-val">3v3 Squad • Crossplay</span>
+              <div class="card-body">
+                <div class="card-top">
+                  <span class="badge-platform">Nintendo Switch</span>
+                  <span class="card-status active-status">Active Team</span>
+                </div>
+                <h4 class="card-title">Super Smash Bros. Ultimate</h4>
+                <p class="card-description">
+                  1v1 singles and 3v3 crew battle formats. Multiple dedicated Switch stations in Room 315 for friendlies, neutral training, and tournament play.
+                </p>
+                <div class="card-meta">
+                  <span class="meta-label">Format:</span>
+                  <span class="meta-val">1v1 & Crew • Switch</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Game 3: League of Legends -->
-          <article class="apple-card" tabindex="0">
-            <div class="card-media">
-              <img 
-                src="assets/game-lol.jpg" 
-                alt="League of Legends champion battle artwork on Summoner's Rift" 
-                class="card-img" 
-                width="800" 
-                height="450" 
-                loading="lazy"
-              >
-              <div class="card-media-shine" aria-hidden="true"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-top">
-                <span class="badge-platform">PC Battle Stations</span>
-                <span class="card-status active-status">Active Team</span>
+            <!-- Game 2: Rocket League -->
+            <article class="apple-card" tabindex="0">
+              <div class="card-media">
+                <img 
+                  src="assets/game-rocketleague.jpg" 
+                  alt="Rocket League rocket-powered cars in an aerial soccer match" 
+                  class="card-img" 
+                  width="960" 
+                  height="540" 
+                  loading="lazy"
+                >
+                <div class="card-media-shine" aria-hidden="true"></div>
               </div>
-              <h3 class="card-title">League of Legends</h3>
-              <p class="card-description">
-                5v5 strategic MOBA on Summoner's Rift. Deep macro strategy, vision control, objective timing, and coordinated 5-player team fights.
-              </p>
-              <div class="card-meta">
-                <span class="meta-label">Format:</span>
-                <span class="meta-val">5v5 Team • PC Stations</span>
+              <div class="card-body">
+                <div class="card-top">
+                  <span class="badge-platform">Cross-Platform</span>
+                  <span class="card-status active-status">Active Team</span>
+                </div>
+                <h4 class="card-title">Rocket League</h4>
+                <p class="card-description">
+                  Fast-paced 3v3 vehicular soccer. Aerial mechanics, rapid rotations, boost control, and coordinated team communication.
+                </p>
+                <div class="card-meta">
+                  <span class="meta-label">Format:</span>
+                  <span class="meta-val">3v3 Squad • Crossplay</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Game 4: Overwatch 2 & Marvel Rivals -->
-          <article class="apple-card card-forming" tabindex="0">
-            <div class="card-media">
-              <img 
-                src="assets/game-heroes.jpg" 
-                alt="Overwatch 2 and Marvel Rivals high-energy hero shooter team clash" 
-                class="card-img" 
-                width="800" 
-                height="450" 
-                loading="lazy"
-              >
-              <div class="card-media-shine" aria-hidden="true"></div>
-            </div>
-            <div class="card-body">
-              <div class="card-top">
-                <span class="badge-platform">PC / Console</span>
-                <span class="card-status forming-status">Roster Forming</span>
+            <!-- Game 3: League of Legends -->
+            <article class="apple-card" tabindex="0">
+              <div class="card-media">
+                <img 
+                  src="assets/game-lol.jpg" 
+                  alt="League of Legends champion battle artwork on Summoner's Rift" 
+                  class="card-img" 
+                  width="960" 
+                  height="540" 
+                  loading="lazy"
+                >
+                <div class="card-media-shine" aria-hidden="true"></div>
               </div>
-              <h3 class="card-title">Overwatch 2 & Marvel Rivals</h3>
-              <p class="card-description">
-                Hero shooters & tactical team fighters. We are forming rosters now—if we have enough interested players, we will officially field teams for competition!
-              </p>
-              <div class="card-meta">
-                <span class="meta-label">Status:</span>
-                <span class="meta-val">Open Interest • All Systems</span>
+              <div class="card-body">
+                <div class="card-top">
+                  <span class="badge-platform">PC Battle Stations</span>
+                  <span class="card-status active-status">Active Team</span>
+                </div>
+                <h4 class="card-title">League of Legends</h4>
+                <p class="card-description">
+                  5v5 strategic MOBA on Summoner's Rift. Deep macro strategy, vision control, objective timing, and coordinated 5-player team fights.
+                </p>
+                <div class="card-meta">
+                  <span class="meta-label">Format:</span>
+                  <span class="meta-val">5v5 Team • PC Stations</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
+          </div>
+        </div>
+
+        <!-- Group 2: Expansion Teams (Subject to Player Numbers) -->
+        <div class="games-group group-expansion">
+          <div class="group-header">
+            <div class="group-title-wrap">
+              <span class="status-indicator-dot dot-forming" aria-hidden="true"></span>
+              <h3 class="group-title">Expansion Titles — Rosters Forming</h3>
+              <span class="group-pill pill-forming">Pending Player Numbers</span>
+            </div>
+            <div class="roster-notice-banner">
+              <span class="notice-icon">📢</span>
+              <p class="notice-text">
+                <strong>High School Competition Requirement:</strong> Fielding an official varsity team to compete against other high schools depends on having enough committed players to fill out complete rosters. Join us in Room 315 on Tuesdays & Thursdays or complete the interest form!
+              </p>
+            </div>
+          </div>
+
+          <div class="cards-grid-2">
+
+            <!-- Game 4: Overwatch 2 -->
+            <article class="apple-card card-forming" tabindex="0">
+              <div class="card-media">
+                <img 
+                  src="assets/game-ow2.jpg" 
+                  alt="Overwatch 2 official hero roster art featuring Tracer, D.Va, Brigitte, and Sojourn" 
+                  class="card-img" 
+                  width="960" 
+                  height="540" 
+                  loading="lazy"
+                >
+                <div class="card-media-shine" aria-hidden="true"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <span class="badge-platform">PC / Console</span>
+                  <span class="card-status forming-status">Roster Forming</span>
+                </div>
+                <h4 class="card-title">Overwatch 2</h4>
+                <p class="card-description">
+                  Tactical 5v5 hero shooter. We are forming rosters for Tank, Damage, and Support roles now. Official league matches against other high schools will be scheduled once we have enough players to field a full squad!
+                </p>
+                <div class="card-meta">
+                  <span class="meta-label">League Matches:</span>
+                  <span class="meta-val">Depends on Roster Numbers</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Game 5: Marvel Rivals -->
+            <article class="apple-card card-forming" tabindex="0">
+              <div class="card-media">
+                <img 
+                  src="assets/game-rivals.jpg" 
+                  alt="Marvel Rivals official superhero battle art with Iron Man, Spider-Man, Storm, and Scarlet Witch" 
+                  class="card-img" 
+                  width="960" 
+                  height="540" 
+                  loading="lazy"
+                >
+                <div class="card-media-shine" aria-hidden="true"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <span class="badge-platform">PC / Console</span>
+                  <span class="card-status forming-status">Roster Forming</span>
+                </div>
+                <h4 class="card-title">Marvel Rivals</h4>
+                <p class="card-description">
+                  Fast-paced 6v6 superhero team battle featuring unique character synergies and destructible battlegrounds. Official competition against neighboring high schools will launch as soon as our roster is filled!
+                </p>
+                <div class="card-meta">
+                  <span class="meta-label">League Matches:</span>
+                  <span class="meta-val">Depends on Roster Numbers</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
       </div>
     </section>
