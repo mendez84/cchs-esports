@@ -1,22 +1,30 @@
-# AGENTS.md — CCHS Esports
+# AGENTS.md — CCHS Esports (Team Uproar)
 
 Guidelines for AI assistants (Antigravity, Claude Code, Codex) working on this repository.
 
-## 🔴 Rules
+## 🎯 Project Baseline & Design Standard
 
-1. **No private student data in public repos:**
-   - Never commit student ID numbers, student full legal names, grades, or raw survey response spreadsheets (`*(Responses)*.xlsx`).
-   - Use gamer tags or first name + initial only if authorized by the coach.
+- **Design System:** Apple Human Interface Design (HIG) + Modern W3C Standards.
+- **Canvas:** Crisp, warm off-white (`#fbfbfd`), frosted glassmorphic navigation (`backdrop-filter: saturate(180%) blur(20px)`), hairline borders (`rgba(0, 0, 0, 0.06)`), and Apple pill buttons (`border-radius: 980px`).
+- **Typography:** Apple system font stack (`-apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter"`).
+- **Layout Architecture:** Keynote-style hero headline, Bento Grid highlights, timeline schedule rows, and clean game cards. Do NOT revert to raw markdown or busy dark-arcade themes.
 
-2. **No complex dependencies / build steps:**
-   - Keep this site plain semantic HTML, CSS, and JS.
-   - Anyone should be able to open `index.html` directly in a browser without `npm install` or bundlers.
+---
 
-3. **CCHS Branding & Design Language:**
-   - **Colors:** CCHS Royal/Lion Blue (`#2563eb`, `#39518f`) and Silver/Slate (`#cbd5e1`, `#94a3b8`, `#111827`).
-   - **Style:** Clean, Notion-inspired document layout (Inter font, subtle borders, callouts with emoji icons, no noisy gamer neon).
-   - **Logo:** `assets/cchs-logo.png` (official blue & black lion head emblem).
+## 🔒 Mandatory Student Privacy & FERPA Rules
 
-4. **GitHub Pages Deployment:**
-   - The site deploys directly from the root of the `main` branch.
-   - Any commit pushed to `main` deploys automatically to `https://mendez84.github.io/cchs-esports/`.
+1. **🔴 Zero Student PII in Git or Public Code:**
+   - NEVER commit student legal names, student ID numbers, grades, attendance logs, phone numbers, or private emails.
+   - When celebrating match results, use approved gamer tags or first name + last initial only with signed district media waivers.
+   - Never commit raw survey response sheets (`*(Responses)*.xlsx`).
+
+2. **🔴 Zero Commercial Tracking or Analytics:**
+   - No tracking cookies, no Google Analytics, no Facebook/Meta pixels, no third-party telemetry.
+   - All student signups MUST route exclusively through district-authenticated Google Forms (`@psusd.us`).
+
+3. **🔴 Child Safety & Communication:**
+   - Never post public, unmoderated Discord invite links on this site.
+   - All team communications and lab sessions must remain teacher-supervised in school facilities.
+
+4. **⚡ No-Build Toolchain:**
+   - Plain HTML5, CSS3, and modern vanilla JavaScript. No node_modules, no webpack/vite bundlers. Runs natively on GitHub Pages and local files.
