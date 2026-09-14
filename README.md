@@ -1,29 +1,23 @@
-# CCHS Esports Website 🎮
+# CCHS Esports • Team Uproar 🦁🎮
 
-Official website and player/teacher hub for **Cathedral City High School Esports** (Palm Springs Unified School District).
+Official internal student hub and public website for **Cathedral City High School Esports** (Palm Springs Unified School District).
 
 Live Site: **[https://mendez84.github.io/cchs-esports/](https://mendez84.github.io/cchs-esports/)**
 
 ---
 
-## 🦁 About
+## 🦁 About Team Uproar
 
-This website provides:
-- Overview of competitive esports titles (Smash Bros Ultimate, Rocket League, Valorant, etc.)
-- Weekly lab hours, practice schedules, and official match days
-- Player eligibility, GPA requirements (2.0+ GPA), and code of conduct
-- Contact details for Coach Mario Mendez and player interest forms
-
----
-
-## 🛠️ Tech Stack & Architecture
-
-- **No Frameworks / No Build Tools:** Plain semantic HTML5, modern vanilla CSS, and vanilla JS.
-- **Fast & Responsive:** Designed for student Chromebooks and mobile phones.
-- **Hosted on GitHub Pages:** Pushing to the `main` branch automatically updates the live site.
+- **League Affiliation:** Desert Valley Esports Association (DVEA) & NASEF
+- **Core Titles:** Super Smash Bros. Ultimate, Rocket League, League of Legends, Mario Kart
+- **Advisor / Coach:** Mario Mendez (Room 402 / Computer Lab)
+- **Live Interest Form:** [Google Form](https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform)
 
 ---
 
-## 🤖 AI Assistant Editing Guide (Antigravity, Claude Code, Codex)
+## 🔒 Compliance & Safety
 
-See [AGENTS.md](AGENTS.md) for conventions on updating match schedules, game titles, rosters, and styling.
+This project strictly adheres to:
+- **FERPA (34 CFR Part 99):** No student grades, attendance records, student ID numbers, or private PII in public git commits.
+- **COPPA & California SOPIPA (Ed Code § 49073.1):** Zero commercial tracking cookies, zero ads, zero user tracking.
+- **WCAG 2.1 AA / Section 508:** Accessible color contrast, keyboard skip links, semantic HTML5.
