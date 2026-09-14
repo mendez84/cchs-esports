@@ -647,3 +647,55 @@ body {
     text-align: left;
   }
 }
+
+/* Pillar Row (Coach Mendez's 3 Pillars) */
+.pillar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.pillar-item:hover {
+  border-color: var(--cchs-blue);
+  transform: translateX(4px);
+}
+
+.pillar-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #93c5fd;
+  background-color: var(--cchs-blue-tint);
+  border: 1px solid var(--cchs-blue-border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillar-item h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.pillar-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
