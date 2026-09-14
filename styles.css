@@ -871,3 +871,49 @@ body {
     align-items: flex-start;
   }
 }
+
+/* Schedule Note Card */
+.schedule-note-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  margin-top: 20px;
+  box-shadow: var(--shadow-card);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.note-icon {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+/* Game Status Badges */
+.card-status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.active-status {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.forming-status {
+  background-color: var(--cchs-blue-tint);
+  color: var(--cchs-blue);
+  border: 1px solid var(--cchs-blue-border);
+}
+
+.card-forming {
+  border: 1px dashed var(--cchs-blue);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
