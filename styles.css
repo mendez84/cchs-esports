@@ -1037,6 +1037,14 @@ body {
   font-size: 0.8rem;
 }
 
+.footer-disclaimer {
+  width: 100%;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 900px) {
   .bento-grid {
