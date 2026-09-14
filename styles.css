@@ -23,7 +23,7 @@
   --text-muted: #6e6e73;
 
   /* Fonts */
-  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
 
   /* Radii & Shadows */
   --radius-sm: 8px;
