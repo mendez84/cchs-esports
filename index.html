@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CCHS Esports | Team Uproar — Cathedral City High School</title>
-  <meta name="description" content="Internal player hub and official website for Cathedral City High School Esports (Team Uproar). Schedules, lab hours, DVEA titles, and player resources.">
+  <title>CCHS Esports • Team Uproar</title>
+  <meta name="description" content="Cathedral City High School Esports player hub. Schedule, titles, lab norms, and signups.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,298 +12,181 @@
 </head>
 <body>
 
-  <!-- Accessible Skip Link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- Top Minimal Bar -->
-  <header class="site-header" role="banner">
-    <div class="nav-container">
-      <a href="#" class="brand-link" aria-label="Team Uproar Home">
-        <img src="assets/8bitlogo.png" alt="Team Uproar 8-bit CCHS Lion Logo" class="brand-logo-img" width="40" height="36">
-        <div class="brand-titles">
-          <span class="brand-title">Team Uproar</span>
-          <span class="brand-subtitle">CCHS Esports • Room 402</span>
-        </div>
+  <!-- Minimal Notion Top Bar -->
+  <header class="notion-topbar" role="banner">
+    <div class="topbar-inner">
+      <div class="breadcrumbs">
+        <span class="crumb-school">Cathedral City High School</span>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">Esports</span>
+      </div>
+      <a href="https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform" target="_blank" rel="noopener noreferrer" class="topbar-btn">
+        Join Team ↗
       </a>
-      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
-        <a href="#schedule" class="nav-link">Schedule & Lab</a>
-        <a href="#games" class="nav-link">DVEA Games</a>
-        <a href="#norms" class="nav-link">Lab Norms</a>
-        <a href="#eligibility" class="nav-link">Eligibility</a>
-        <a href="https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Sign Up / Join</a>
-      </nav>
     </div>
   </header>
 
-  <main id="main-content" class="page-content" role="main">
-    <div class="container">
+  <!-- Document Body (Max 740px, True Notion Layout) -->
+  <main id="main-content" class="document-container" role="main">
 
-      <!-- Notion-style Page Header -->
-      <section class="page-intro" aria-labelledby="page-title">
-        <div class="page-icon" aria-hidden="true">🦁</div>
-        <h1 id="page-title" class="page-title">CCHS Esports • Team Uproar</h1>
-        <p class="page-desc">
-          Official player hub for Cathedral City High School esports athletes, crew, and club members. Active member of the Desert Valley Esports Association (DVEA) and NASEF.
-        </p>
+    <!-- Notion Page Header -->
+    <header class="page-header">
+      <div class="page-icon" aria-hidden="true">🦁</div>
+      <h1 class="page-title">CCHS Esports • Team Uproar</h1>
+      <p class="page-subtitle">
+        Official player hub for Cathedral City High School competitive gaming, open lab hours, and DVEA league operations.
+      </p>
 
-        <!-- Notion-style Announcements Callout -->
-        <div class="callout callout-info" role="region" aria-label="Lab hours announcement">
-          <div class="callout-icon" aria-hidden="true">💡</div>
-          <div class="callout-body">
-            <strong>Lab Open Daily:</strong> The Esports Lab is open for <strong>Lunch Hangouts</strong> and after school for team practice/matches from <strong>3:45 PM – 5:30 PM</strong>. Everyone is welcome—competitive teams, casual gamers, streamers, and managers.
-          </div>
+      <!-- Notion Properties Block -->
+      <div class="properties-block">
+        <div class="property-row">
+          <span class="prop-label">Coach</span>
+          <span class="prop-value">Mr. Mario Mendez (Room 402)</span>
+        </div>
+        <div class="property-row">
+          <span class="prop-label">League</span>
+          <span class="prop-value"><a href="https://www.psusd.us/dvea" target="_blank" rel="noopener noreferrer">Desert Valley Esports Association (DVEA) ↗</a></span>
+        </div>
+        <div class="property-row">
+          <span class="prop-label">Sign Up</span>
+          <span class="prop-value"><a href="https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform" target="_blank" rel="noopener noreferrer">2026–2027 Interest Form (Google Form) ↗</a></span>
+        </div>
+      </div>
+
+      <!-- Single Callout Box -->
+      <div class="callout" role="note">
+        <span class="callout-icon">💡</span>
+        <div class="callout-text">
+          <strong>Lab Schedule:</strong> Open daily for <strong>Lunch</strong> and after school <strong>3:45 PM – 5:30 PM</strong>. Everyone is welcome—varsity competitors, casual gamers, shoutcasters, streamers, and student managers.
+        </div>
+      </div>
+    </header>
+
+    <hr class="notion-hr">
+
+    <!-- Section 1: Weekly Schedule -->
+    <section class="notion-section" aria-labelledby="schedule-title">
+      <h2 id="schedule-title" class="section-heading">Weekly Lab & Match Schedule</h2>
+      <p class="section-note">
+        Practice, scrims, and official DVEA league matches take place in the CCHS Esports Lab (Room 402).
+      </p>
+
+      <table class="notion-table">
+        <caption class="sr-only">Weekly esports lab schedule and match days</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="width: 28%;">Time / Day</th>
+            <th scope="col" style="width: 72%;">Activity & Game Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Daily Lunch</strong></td>
+            <td>Open Lab • Smash freeplay, casual gaming, chill with AC</td>
+          </tr>
+          <tr>
+            <td><strong>Monday</strong></td>
+            <td>3:45 – 5:15 PM • All-hands strategy, VOD reviews, open practice</td>
+          </tr>
+          <tr>
+            <td><strong>Tuesday</strong></td>
+            <td>3:45 – 5:30 PM • <strong>Super Smash Bros. Ultimate</strong> (DVEA Matches & Practice)</td>
+          </tr>
+          <tr>
+            <td><strong>Wednesday</strong></td>
+            <td>3:45 – 5:30 PM • <strong>Rocket League</strong> (DVEA Matches & Scrimmages)</td>
+          </tr>
+          <tr>
+            <td><strong>Thursday</strong></td>
+            <td>3:45 – 5:30 PM • <strong>League of Legends</strong> & Tactical PC Matches</td>
+          </tr>
+          <tr>
+            <td><strong>Friday</strong></td>
+            <td>3:45 – 4:45 PM • Mario Kart, fighting games & community play</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2: Active Titles -->
+    <section class="notion-section" aria-labelledby="games-title">
+      <h2 id="games-title" class="section-heading">Competitive Game Titles</h2>
+      
+      <div class="toggle-list">
+        <div class="toggle-item">
+          <h3>🎮 Super Smash Bros. Ultimate</h3>
+          <p>DVEA Core Title • Nintendo Switch • Matches on Tuesdays. 1v1 singles and 3v3 crew battle formats. 3 dedicated TV setups for freeplay and tournament rotations.</p>
         </div>
 
-        <div class="quick-actions">
-          <a href="https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Complete Season Interest Form ↗</a>
-          <a href="#schedule" class="btn btn-secondary">Weekly Lab & Match Hours</a>
-          <a href="https://www.psusd.us/dvea" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">DVEA League Portal ↗</a>
-        </div>
-      </section>
-
-      <!-- Section: Schedule & Lab Hours -->
-      <section id="schedule" class="doc-section" aria-labelledby="schedule-heading">
-        <div class="section-title-group">
-          <h2 id="schedule-heading">📅 Lab Schedule & Match Days</h2>
-          <span class="section-badge">Fall 2026</span>
-        </div>
-        
-        <div class="callout callout-neutral">
-          <div class="callout-icon" aria-hidden="true">📍</div>
-          <div class="callout-body">
-            <strong>Location:</strong> CCHS Esports Computer Lab • <strong>Lunch:</strong> Open daily • <strong>After School:</strong> 3:45 PM – 5:30 PM
-          </div>
+        <div class="toggle-item">
+          <h3>⚽ Rocket League</h3>
+          <p>DVEA Core Title • Cross-Platform • Matches on Wednesdays. 3v3 team soccer emphasizing aerial rotation, communication, and boost management.</p>
         </div>
 
-        <div class="table-container">
-          <table class="clean-table">
-            <caption class="sr-only">Weekly schedule for CCHS Esports practices and DVEA league matches</caption>
-            <thead>
-              <tr>
-                <th scope="col" style="width: 20%;">Day</th>
-                <th scope="col" style="width: 50%;">Focus & Activity</th>
-                <th scope="col" style="width: 30%;">Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Daily Lunch</strong></td>
-                <td>Open Lab, Casual Freeplay, Smash Friendlies & AC Chill Area</td>
-                <td>Lunch Period</td>
-              </tr>
-              <tr>
-                <td><strong>Monday</strong></td>
-                <td>All-Hands Strategy, VOD Review & Open Lab Practice</td>
-                <td>3:45 PM – 5:15 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Tuesday</strong></td>
-                <td><span class="tag-blue">Super Smash Bros. Ultimate</span> (DVEA Match Day & Practice)</td>
-                <td>3:45 PM – 5:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Wednesday</strong></td>
-                <td><span class="tag-blue">Rocket League</span> (DVEA Match Day & Scrims)</td>
-                <td>3:45 PM – 5:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Thursday</strong></td>
-                <td><span class="tag-blue">League of Legends</span> & Tactical PC Games</td>
-                <td>3:45 PM – 5:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Friday</strong></td>
-                <td>Mario Kart, Fighting Games, In-House Community Tournaments</td>
-                <td>3:45 PM – 4:45 PM</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Section: Active Games -->
-      <section id="games" class="doc-section" aria-labelledby="games-heading">
-        <div class="section-title-group">
-          <h2 id="games-heading">🎮 Competitive & Club Titles</h2>
-          <span class="section-badge">DVEA Sanctioned</span>
-        </div>
-        <p class="section-intro-text">
-          Team Uproar competes in the Desert Valley Esports Association (DVEA) against schools across the valley.
-        </p>
-
-        <div class="cards-grid">
-          <!-- Smash -->
-          <article class="notion-card">
-            <div class="card-header">
-              <span class="pill pill-blue">Switch • 3 TVs</span>
-              <span class="pill pill-silver">Tuesdays</span>
-            </div>
-            <h3>Super Smash Bros. Ultimate</h3>
-            <p>1v1 Singles & 3v3 Crew Battles. Three dedicated station setups for friendlies, bracket play, and tech-chasing practice.</p>
-            <div class="card-footer">
-              <span><strong>League:</strong> DVEA Core Title</span>
-            </div>
-          </article>
-
-          <!-- Rocket League -->
-          <article class="notion-card">
-            <div class="card-header">
-              <span class="pill pill-blue">Cross-Platform</span>
-              <span class="pill pill-silver">Wednesdays</span>
-            </div>
-            <h3>Rocket League</h3>
-            <p>3v3 high-speed squad play. Aerial rotations, field communication, boost management, and synergy executes.</p>
-            <div class="card-footer">
-              <span><strong>League:</strong> DVEA Core Title</span>
-            </div>
-          </article>
-
-          <!-- League of Legends -->
-          <article class="notion-card">
-            <div class="card-header">
-              <span class="pill pill-blue">PC League</span>
-              <span class="pill pill-silver">Thursdays</span>
-            </div>
-            <h3>League of Legends</h3>
-            <p>5v5 MOBA team competition. Macro strategy, vision control, wave management, and objective control on Summoner's Rift.</p>
-            <div class="card-footer">
-              <span><strong>League:</strong> DVEA Core Title</span>
-            </div>
-          </article>
-
-          <!-- Mario Kart & Club -->
-          <article class="notion-card">
-            <div class="card-header">
-              <span class="pill pill-silver">Console / PC</span>
-              <span class="pill pill-silver">Mon / Fri</span>
-            </div>
-            <h3>Mario Kart & Community Titles</h3>
-            <p>Mario Kart 8 Deluxe, Valorant, fighting games, and community bracket nights. Welcoming space for all club members.</p>
-            <div class="card-footer">
-              <span><strong>Format:</strong> Club & Expansion</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Section: Lab Rules & Equipment Norms -->
-      <section id="norms" class="doc-section" aria-labelledby="norms-heading">
-        <div class="section-title-group">
-          <h2 id="norms-heading">🛡️ Lab Rules & Equipment Norms</h2>
-        </div>
-        <p class="section-intro-text">
-          Our equipment is an investment in your program. Treat the room with pride so everyone can play.
-        </p>
-
-        <div class="rules-container">
-          <div class="rule-box">
-            <h3>🥪 Food, Drinks & Cleanliness</h3>
-            <ul class="clean-list">
-              <li><strong>Lunch Trays & Snacks:</strong> Must be eaten on the outer tables away from keyboards, PCs, and Switch docks.</li>
-              <li><strong>Clean Hands:</strong> Wash or sanitize hands before using controllers or peripherals (wipes are available at the entrance).</li>
-              <li><strong>Clean Up:</strong> Throw away all wrappers, bottles, and trays before the bell rings. Leave the lab cleaner than you found it.</li>
-            </ul>
-          </div>
-
-          <div class="rule-box">
-            <h3>🎧 Gear & Station Etiquette</h3>
-            <ul class="clean-list">
-              <li><strong>Gaming Chairs:</strong> Reserved strictly for PC battle stations. Do not drag them over to the Smash TV area.</li>
-              <li><strong>Smash Stations:</strong> 3 TVs are set up for freeplay and crew rotations. Winner stays, max 2 consecutive matches when others are waiting.</li>
-              <li><strong>Respect Equipment:</strong> No rage-quitting, slamming controllers, or pulling cords. Report any hardware bugs to Coach Mendez immediately.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Eligibility & Pillars -->
-      <section id="eligibility" class="doc-section" aria-labelledby="eligibility-heading">
-        <div class="section-title-group">
-          <h2 id="eligibility-heading">📋 Coach Mendez's 3 Pillars</h2>
+        <div class="toggle-item">
+          <h3>⚔️ League of Legends</h3>
+          <p>DVEA Core Title • PC • Matches on Thursdays. 5v5 MOBA competition focusing on macro strategy, communication, and team fighting.</p>
         </div>
 
-        <div class="pillar-row">
-          <div class="pillar-item">
-            <div class="pillar-num">1</div>
-            <div>
-              <h4>Everyone Stays Eligible</h4>
-              <p>Minimum <strong>2.0 GPA</strong> with no Fs. Grade checks happen before every match day. The goal isn't to kick anyone off—it's to catch struggles early so we can tutor and recover together.</p>
-            </div>
-          </div>
-          <div class="pillar-item">
-            <div class="pillar-num">2</div>
-            <div>
-              <h4>More Diversity & Inclusion</h4>
-              <p>Reaching out to students in art, theater, DATA, and beyond. Whether you're a competitive grinder or a casual gamer looking for AC at lunch, you belong here.</p>
-            </div>
-          </div>
-          <div class="pillar-item">
-            <div class="pillar-num">3</div>
-            <div>
-              <h4>Grow Beyond Playing</h4>
-              <p>Real opportunities in student leadership: Game Captains, Stream Production, Shoutcasting, Graphic Design, Video Editing, and Club Officers (President, VP, Secretary, Treasurer).</p>
-            </div>
-          </div>
+        <div class="toggle-item">
+          <h3>🏎️ Mario Kart & Community Titles</h3>
+          <p>Club & Expansion • Open to all skill levels on Mondays and Fridays. A welcoming space for friendly matches, casual gamers, and community brackets.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Section: Join Action Banner -->
-      <section id="join" class="doc-section" aria-labelledby="join-heading">
-        <div class="callout callout-join">
-          <div class="callout-icon" aria-hidden="true">🚀</div>
-          <div class="callout-body">
-            <h3 id="join-heading">Get Involved with Team Uproar</h3>
-            <p>Ready to represent Cathedral City High School? Fill out the official interest form to join our match rosters or production crew.</p>
-            <div class="cta-row">
-              <a href="https://docs.google.com/forms/d/1iDRpoHiIonTB-4N9V-JEVBDpZ0_VfK93K412AzMPgU4/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open 2026–27 Interest Form ↗</a>
-              <span class="coach-contact">Advisor / Coach: <strong>Mr. Mario Mendez</strong> • Room 402</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Section 3: Lab Norms -->
+    <section class="notion-section" aria-labelledby="norms-title">
+      <h2 id="norms-title" class="section-heading">Lab Norms & Equipment Etiquette</h2>
+      <p class="section-note">
+        Our computers, consoles, and monitors are an investment in our students. Treat the room with pride.
+      </p>
 
-      <!-- Section: Privacy & Compliance -->
-      <section id="privacy" class="doc-section privacy-section" aria-labelledby="privacy-heading">
-        <div class="section-title-group">
-          <h2 id="privacy-heading">🔒 Student Privacy & District Compliance</h2>
-        </div>
-        <div class="privacy-card">
-          <p class="privacy-lead">
-            Cathedral City High School Esports complies with FERPA, COPPA, and California SOPIPA. This page is an informational student resource.
-          </p>
-          <div class="compliance-grid">
-            <div class="compliance-item">
-              <h4>FERPA & Student Records</h4>
-              <p>No confidential student records, grades, or personal identifying numbers are published. Roster shoutouts are limited to gamer tags and require signed district media forms.</p>
-            </div>
-            <div class="compliance-item">
-              <h4>Zero Tracking (COPPA / SOPIPA)</h4>
-              <p>Zero advertising trackers, zero cookies, and zero commercial data selling. Registration and surveys use district-authenticated Google Workspace accounts (<code>@psusd.us</code>).</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ul class="bullet-list">
+        <li><strong>Food & Trays:</strong> Lunch trays and snacks must stay on the perimeter tables away from keyboards, mice, and Switch docks.</li>
+        <li><strong>Clean Hands:</strong> Wash hands before playing. Sanitizing wipes are available by the door—wipe down controllers when finished.</li>
+        <li><strong>Chairs:</strong> Black gaming chairs stay at PC stations only. Do not drag them over to the Smash TVs.</li>
+        <li><strong>Smash Rotations:</strong> Winner stays, maximum 2 consecutive wins when other players are waiting in line.</li>
+        <li><strong>Zero Rage-Quitting:</strong> Never slam controllers, headsets, or keyboards. Treat gear with care.</li>
+      </ul>
+    </section>
 
-    </div>
+    <!-- Section 4: Coach Mendez's 3 Pillars -->
+    <section class="notion-section" aria-labelledby="pillars-title">
+      <h2 id="pillars-title" class="section-heading">Coach Mendez’s 3 Pillars (2026–27)</h2>
+
+      <ol class="numbered-list">
+        <li>
+          <strong>Everyone Stays Eligible:</strong> Minimum 2.0 GPA with no Fs. Grade checks happen before every match day. The goal isn't to bench players—it's to catch struggles early so we can tutor, communicate, and recover together.
+        </li>
+        <li>
+          <strong>More Diversity & Inclusion:</strong> Reaching out beyond gaming circles into art, theater, DATA Academy, and other clubs. Whether you're a competitive grinder or just want a safe hangout with AC at lunch, you belong here.
+        </li>
+        <li>
+          <strong>Grow Beyond Playing:</strong> Real leadership and career roles for non-players: Game Captains, Stream Technicians, Video Editors, Shoutcasters, Graphic Designers, and Club Officers.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Section 5: Student Privacy & Compliance -->
+    <section class="notion-section" aria-labelledby="safety-title">
+      <h2 id="safety-title" class="section-heading">Privacy & Safety Standards</h2>
+      <p class="section-note">
+        Cathedral City High School Esports complies with FERPA, COPPA, California SOPIPA, and PSUSD Board Policies (BP 0410, BP 5131.2, BP 6163.4). No private student records, grades, or personal identifying info are published on this site.
+      </p>
+    </section>
+
+    <hr class="notion-hr">
+
+    <!-- Minimal Footer -->
+    <footer class="page-footer" role="contentinfo">
+      <p>Cathedral City High School • Palm Springs Unified School District</p>
+      <p class="footer-meta">Advisor: Mr. Mario Mendez • Room 402 • Team Uproar</p>
+    </footer>
+
   </main>
 
-  <!-- Clean Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/8bitlogo.png" alt="Team Uproar Logo" class="footer-logo" width="32" height="30">
-        <div>
-          <strong>Team Uproar • Cathedral City High School Esports</strong>
-          <p>Palm Springs Unified School District • 69-250 Dinah Shore Dr, Cathedral City, CA</p>
-        </div>
-      </div>
-      <div class="footer-meta">
-        <p>Coach: <strong>Mr. Mario Mendez</strong> • DVEA Member</p>
-        <p class="copyright">&copy; <span id="currentYear"></span> CCHS Lions Esports</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>

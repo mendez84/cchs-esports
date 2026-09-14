@@ -1,40 +1,44 @@
 /* ==========================================================================
-   CCHS Esports — Notion-inspired Minimal Theme
-   School Colors: CCHS Blue & Silver / White / Slate Black
-   Standards: WCAG 2.1 AA / Section 508 / FERPA / COPPA / SOPIPA compliant
+   CCHS Esports — Authentic Notion Minimalist Theme
+   Clean, quiet, document-first layout. No clutter, no arcade noise.
    ========================================================================== */
 
 :root {
-  /* Official CCHS Color Palette */
-  --cchs-blue: #2563eb;
-  --cchs-blue-dark: #1d4ed8;
-  --cchs-blue-emblem: #39518f;
-  --cchs-blue-tint: rgba(37, 99, 235, 0.12);
-  --cchs-blue-border: rgba(59, 130, 246, 0.4);
+  /* Notion Light Palette */
+  --bg-page: #ffffff;
+  --bg-subtle: #f7f7f5;
+  --bg-callout: #f1f1ef;
+  --border-subtle: #e9e9e8;
+  --border-table: #e1e1df;
 
-  --cchs-silver: #cbd5e1;
-  --cchs-silver-light: #f1f5f9;
-  --cchs-silver-dim: #94a3b8;
-  --cchs-silver-tint: rgba(203, 213, 225, 0.08);
+  --text-main: #37352f;
+  --text-muted: #787774;
+  --text-light: #9b9a97;
 
-  /* Backgrounds & Surfaces (Clean Slate / Charcoal) */
-  --bg-main: #0b0f19;
-  --bg-surface: #111827;
-  --bg-surface-elevated: #162032;
-  --border-color: #243046;
-  --border-subtle: #1e293b;
+  --accent-blue: #0066cc;
+  --accent-blue-hover: #004d99;
 
-  /* Typography Colors (High-Contrast WCAG Compliant) */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+}
 
-  /* Fonts & Radius */
-  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --transition: all 0.2s ease;
+/* Notion Dark Mode (matches system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #191919;
+    --bg-subtle: #202020;
+    --bg-callout: #232323;
+    --border-subtle: #2e2e2e;
+    --border-table: #333333;
+
+    --text-main: #e6e6e6;
+    --text-muted: #9e9e9e;
+    --text-light: #707070;
+
+    --accent-blue: #58a6ff;
+    --accent-blue-hover: #79b8ff;
+  }
 }
 
 *, *::before, *::after {
@@ -44,38 +48,37 @@
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-base);
-  background-color: var(--bg-main);
-  color: var(--text-primary);
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Accessibility: Skip Link */
+/* Accessibility Skip Link */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 16px;
-  background-color: var(--cchs-blue);
+  background-color: var(--accent-blue);
   color: #ffffff;
-  padding: 12px 18px;
+  padding: 8px 14px;
   border-radius: var(--radius-sm);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   z-index: 1000;
-  transition: top 0.2s ease;
 }
 
 .skip-link:focus {
   top: 16px;
-  outline: 3px solid #ffffff;
+  outline: 2px solid var(--text-main);
 }
 
-/* Accessibility: Screen Reader Utility */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -84,618 +87,265 @@ body {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
   border: 0;
 }
 
-/* Accessibility: Universal Focus Indicator */
-:focus-visible {
-  outline: 2px solid #60a5fa;
-  outline-offset: 3px;
-}
-
-/* Layout Container */
-.container {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Site Header */
-.site-header {
+/* Minimal Top Bar */
+.notion-topbar {
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-page);
   position: sticky;
   top: 0;
-  z-index: 100;
-  background-color: rgba(11, 15, 25, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
 }
 
-.nav-container {
-  max-width: 920px;
+.topbar-inner {
+  max-width: 740px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.brand-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.brand-logo-img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 2px;
-  border: 1px solid var(--cchs-silver);
-}
-
-.brand-titles {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.2px;
-}
-
-.brand-subtitle {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.nav-link:hover {
-  color: var(--text-primary);
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition);
-  border: 1px solid transparent;
-}
-
-.btn-sm {
-  padding: 6px 14px;
   font-size: 0.85rem;
 }
 
-.btn-primary {
-  background-color: var(--cchs-blue);
-  color: #ffffff;
+.breadcrumbs {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.btn-primary:hover {
-  background-color: var(--cchs-blue-dark);
+.crumb-sep {
+  color: var(--text-light);
 }
 
-.btn-secondary {
-  background-color: var(--bg-surface);
-  color: var(--cchs-silver);
-  border-color: var(--border-color);
+.crumb-current {
+  color: var(--text-main);
+  font-weight: 500;
 }
 
-.btn-secondary:hover {
-  background-color: var(--bg-surface-elevated);
-  color: var(--text-primary);
-  border-color: var(--cchs-silver-dim);
+.topbar-btn {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.15s ease;
 }
 
-/* Page Intro */
-.page-content {
-  padding: 50px 0 90px;
+.topbar-btn:hover {
+  background-color: var(--bg-callout);
+  color: var(--accent-blue-hover);
 }
 
-.page-intro {
-  margin-bottom: 50px;
-  padding-bottom: 36px;
-  border-bottom: 1px solid var(--border-color);
+/* Document Container */
+.document-container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 32px;
 }
 
 .page-icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-
-.page-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-  letter-spacing: -0.8px;
-  line-height: 1.2;
+  font-size: 3.25rem;
+  line-height: 1;
   margin-bottom: 14px;
 }
 
-.page-desc {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 750px;
+.page-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.5;
   margin-bottom: 24px;
 }
 
-.quick-actions {
+/* Notion Properties Block */
+.properties-block {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 24px;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.property-row {
+  display: flex;
+  align-items: center;
+}
+
+.prop-label {
+  width: 100px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.prop-value {
+  color: var(--text-main);
+}
+
+.prop-value a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.prop-value a:hover {
+  text-decoration: underline;
 }
 
 /* Notion Callout Box */
 .callout {
   display: flex;
-  gap: 16px;
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  font-size: 0.95rem;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--bg-callout);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 0.92rem;
   line-height: 1.55;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .callout-icon {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
   flex-shrink: 0;
-  line-height: 1.4;
 }
 
-.callout-body {
-  color: var(--text-secondary);
+.callout-text {
+  color: var(--text-main);
 }
 
-.callout-body strong {
-  color: var(--text-primary);
-}
-
-.callout-info {
-  background-color: var(--cchs-blue-tint);
-  border-color: var(--cchs-blue-border);
-}
-
-.callout-info .callout-body {
-  color: var(--cchs-silver-light);
-}
-
-.callout-neutral {
-  background-color: var(--bg-surface);
-}
-
-.callout-join {
-  background-color: var(--bg-surface-elevated);
-  border-color: var(--cchs-blue-border);
-  padding: 24px 28px;
-}
-
-.callout-join h3 {
-  font-size: 1.25rem;
-  margin-bottom: 6px;
-  color: var(--text-primary);
-}
-
-.cta-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-
-.coach-contact {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.coach-contact strong {
-  color: var(--cchs-silver);
+/* Horizontal Divider */
+.notion-hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-subtle);
+  margin: 36px 0;
 }
 
 /* Sections */
-.doc-section {
-  margin-bottom: 56px;
+.notion-section {
+  margin-bottom: 40px;
 }
 
-.section-title-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.section-title-group h2 {
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-
-.section-badge {
-  font-size: 0.75rem;
+.section-heading {
+  font-size: 1.4rem;
   font-weight: 600;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  background-color: var(--cchs-silver-tint);
-  color: var(--cchs-silver);
-  border: 1px solid var(--border-color);
+  letter-spacing: -0.2px;
+  margin-bottom: 8px;
+  color: var(--text-main);
 }
 
-.section-intro-text {
+.section-note {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 24px;
-}
-
-/* Cards Grid */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
-}
-
-.notion-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.notion-card:hover {
-  border-color: var(--cchs-blue);
-  transform: translateY(-2px);
-}
-
-.card-header {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 999px;
-}
-
-.pill-blue {
-  background-color: var(--cchs-blue-tint);
-  color: #93c5fd;
-  border: 1px solid var(--cchs-blue-border);
-}
-
-.pill-silver {
-  background-color: rgba(203, 213, 225, 0.08);
-  color: var(--cchs-silver);
-  border: 1px solid var(--border-color);
-}
-
-.notion-card h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text-primary);
-}
-
-.notion-card p {
   font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  flex-grow: 1;
   margin-bottom: 18px;
 }
 
-.card-footer {
-  padding-top: 12px;
-  border-top: 1px solid var(--border-subtle);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.card-footer strong {
-  color: var(--cchs-silver);
-}
-
-/* Schedule Table */
-.table-container {
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  overflow-x: auto;
-  background-color: var(--bg-surface);
-  margin-top: 14px;
-}
-
-.clean-table {
+/* Clean Notion Table */
+.notion-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.92rem;
-  text-align: left;
-  min-width: 500px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-table);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 12px;
 }
 
-.clean-table th, .clean-table td {
-  padding: 14px 18px;
+.notion-table th, .notion-table td {
+  padding: 10px 14px;
   border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+  vertical-align: top;
 }
 
-.clean-table th {
-  background-color: var(--bg-surface-elevated);
-  color: var(--cchs-silver);
+.notion-table th {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
   font-weight: 600;
   font-size: 0.82rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-table);
 }
 
-.clean-table td {
-  color: var(--text-secondary);
+.notion-table td {
+  color: var(--text-main);
 }
 
-.clean-table td strong {
-  color: var(--text-primary);
-}
-
-.clean-table tr:last-child td {
+.notion-table tr:last-child td {
   border-bottom: none;
 }
 
-.tag-blue {
-  color: #93c5fd;
-  font-weight: 600;
-}
-
-/* Rules / Standards Box */
-.rules-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-.rule-box {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 24px;
-}
-
-.rule-box h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--text-primary);
-}
-
-.clean-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.clean-list li {
-  position: relative;
-  padding-left: 22px;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.clean-list li::before {
-  content: "•";
-  position: absolute;
-  left: 4px;
-  color: var(--cchs-blue);
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.clean-list li strong {
-  color: var(--text-primary);
-}
-
-/* Privacy & Compliance Section */
-.privacy-section {
-  padding-top: 10px;
-}
-
-.privacy-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 26px;
-}
-
-.privacy-lead {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 22px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.compliance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 20px;
-}
-
-.compliance-item h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--cchs-silver-light);
-  margin-bottom: 6px;
-}
-
-.compliance-item p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.compliance-item code {
-  background-color: rgba(255, 255, 255, 0.08);
-  padding: 1px 5px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  color: #93c5fd;
-}
-
-/* Site Footer */
-.site-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 32px 0;
-  background-color: #070a11;
-  font-size: 0.85rem;
-}
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 2px;
-}
-
-.footer-brand strong {
-  color: var(--text-primary);
-  display: block;
-}
-
-.footer-brand p {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-.footer-meta {
-  text-align: right;
-  color: var(--text-muted);
-}
-
-.footer-meta strong {
-  color: var(--cchs-silver);
-}
-
-.copyright {
-  font-size: 0.78rem;
-  margin-top: 4px;
-}
-
-/* Responsive */
-@media (max-width: 680px) {
-  .nav-menu {
-    gap: 12px;
-  }
-  
-  .brand-subtitle {
-    display: none;
-  }
-  
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .footer-meta {
-    text-align: left;
-  }
-}
-
-/* Pillar Row (Coach Mendez's 3 Pillars) */
-.pillar-row {
+/* Toggle / Card List */
+.toggle-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 14px;
 }
 
-.pillar-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  transition: var(--transition);
+.toggle-item {
+  border-left: 2px solid var(--accent-blue);
+  padding: 4px 0 4px 16px;
 }
 
-.pillar-item:hover {
-  border-color: var(--cchs-blue);
-  transform: translateX(4px);
-}
-
-.pillar-num {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #93c5fd;
-  background-color: var(--cchs-blue-tint);
-  border: 1px solid var(--cchs-blue-border);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.pillar-item h4 {
+.toggle-item h3 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
   margin-bottom: 4px;
+  color: var(--text-main);
 }
 
-.pillar-item p {
+.toggle-item p {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.5;
+}
+
+/* Bullet & Numbered Lists */
+.bullet-list, .numbered-list {
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.bullet-list li, .numbered-list li {
+  line-height: 1.55;
+}
+
+.bullet-list li strong, .numbered-list li strong {
+  color: var(--text-main);
+}
+
+/* Page Footer */
+.page-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-top: 12px;
+}
+
+.footer-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
 }
