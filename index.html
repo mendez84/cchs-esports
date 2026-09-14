@@ -4,274 +4,239 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CCHS Esports | Cathedral City High School</title>
-  <meta name="description" content="Official website for Cathedral City High School Esports. Compete, connect, and represent CCHS in competitive gaming.">
+  <meta name="description" content="Official Cathedral City High School Esports hub. Schedule, teams, eligibility, and announcements.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+
+  <!-- Top Minimal Bar -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <span class="logo-badge">CCHS</span>
-        <span class="logo-text">ESPORTS</span>
+      <a href="#" class="brand-link">
+        <img src="assets/cchs-logo.png" alt="CCHS Lion" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-title">CCHS Esports</span>
+          <span class="brand-subtitle">Cathedral City High School</span>
+        </div>
       </a>
-      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">About</a>
+      <nav class="nav-menu">
         <a href="#games" class="nav-link">Games</a>
         <a href="#schedule" class="nav-link">Schedule</a>
         <a href="#eligibility" class="nav-link">Eligibility</a>
-        <a href="#join" class="btn btn-nav">Join Team</a>
+        <a href="#join" class="btn btn-sm btn-primary">Join Team</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-backdrop"></div>
-    <div class="container hero-content">
-      <div class="hero-pill">
-        <span class="pulse-dot"></span> Official CCHS High School Esports
-      </div>
-      <h1 class="hero-title">
-        COMPETE.<br>
-        CONNECT.<br>
-        <span class="text-gold">LEVEL UP.</span>
-      </h1>
-      <p class="hero-subtitle">
-        Cathedral City High School's competitive esports program. Representing the Lions in state and national leagues with sportsmanship, teamwork, and academic excellence.
-      </p>
-      <div class="hero-cta-group">
-        <a href="#join" class="btn btn-primary">Join the Team / Interest Form</a>
-        <a href="#schedule" class="btn btn-secondary">View Lab & Practice Schedule</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <span class="stat-num">4+</span>
-          <span class="stat-label">Active Game Titles</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">2.0+</span>
-          <span class="stat-label">Academic GPA Standard</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">Fall & Spring</span>
-          <span class="stat-label">Competitive Seasons</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / Program Pillars -->
-  <section id="about" class="section-container">
+  <main class="page-content">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">PROGRAM VALUES</span>
-        <h2 class="section-title">More Than Just Gaming</h2>
-        <p class="section-desc">CCHS Esports is built on the same foundation as any traditional varsity athletic program: discipline, communication, academic responsibility, and leadership.</p>
-      </div>
 
-      <div class="grid-3">
-        <div class="pillar-card">
-          <div class="pillar-icon">🎯</div>
-          <h3>Competitive Play</h3>
-          <p>Compete in sanctioned high school leagues against rivals across Southern California and the nation.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📚</div>
-          <h3>Academics First</h3>
-          <p>Student-athletes are held to strict GPA and attendance standards. We support tutoring and study sessions before game time.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🤝</div>
-          <h3>Community & Career</h3>
-          <p>Gain real-world experience beyond playing: shoutcasting, video production, graphic design, social media, and team management.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Notion-style Page Header -->
+      <section class="page-intro">
+        <div class="page-icon">🦁</div>
+        <h1 class="page-title">Cathedral City High School Esports</h1>
+        <p class="page-desc">
+          Official competitive gaming and scholastic esports hub for the CCHS Lions. Competing in the Desert Valley Esports Association (DVEA) and CIF/NASEF-affiliated leagues.
+        </p>
 
-  <!-- Featured Games -->
-  <section id="games" class="section-container bg-surface">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">TEAMS & TITLES</span>
-        <h2 class="section-title">Competitive Titles</h2>
-        <p class="section-desc">We field varsity, junior varsity, and club teams across major high school esports titles.</p>
-      </div>
-
-      <div class="games-grid">
-        <!-- Smash -->
-        <article class="game-card">
-          <div class="game-badge">Console (Switch)</div>
-          <h3 class="game-title">Super Smash Bros. Ultimate</h3>
-          <p class="game-desc">1v1 and crew battle formats. Fast-paced platform fighter requiring precision, matchup knowledge, and split-second reactions.</p>
-          <div class="game-meta">
-            <span><strong>Format:</strong> 1v1 / 3v3 Crew</span>
-            <span><strong>Day:</strong> Tuesdays</span>
+        <!-- Notion-style Callout Box -->
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <strong>Welcome to the 2026–2027 Season!</strong> Lab doors open after school from <strong>3:45 PM – 5:30 PM</strong> in the Computer Lab. All skill levels—from varsity competitors to casual gamers, broadcast crew, and managers—are welcome.
           </div>
-        </article>
-
-        <!-- Rocket League -->
-        <article class="game-card">
-          <div class="game-badge">Cross-Platform</div>
-          <h3 class="game-title">Rocket League</h3>
-          <p class="game-desc">High-flying vehicular soccer. 3v3 squad play emphasizing aerial mechanics, rapid rotations, and non-stop communication.</p>
-          <div class="game-meta">
-            <span><strong>Format:</strong> 3v3 Squad</span>
-            <span><strong>Day:</strong> Wednesdays</span>
-          </div>
-        </article>
-
-        <!-- Valorant -->
-        <article class="game-card">
-          <div class="game-badge">PC</div>
-          <h3 class="game-title">Valorant</h3>
-          <p class="game-desc">5v5 character-based tactical shooter. Coordinated team executes, utility usage, and clutch-round decision making.</p>
-          <div class="game-meta">
-            <span><strong>Format:</strong> 5v5 Tactical</span>
-            <span><strong>Day:</strong> Thursdays</span>
-          </div>
-        </article>
-
-        <!-- Additional Games / Club -->
-        <article class="game-card">
-          <div class="game-badge">Expanding</div>
-          <h3 class="game-title">Club & Additional Titles</h3>
-          <p class="game-desc">League of Legends, Overwatch 2, Mario Kart, and fighting games depending on student interest and league offerings each semester.</p>
-          <div class="game-meta">
-            <span><strong>Format:</strong> Team / Solo</span>
-            <span><strong>Day:</strong> Open Lab</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Schedule & Lab Hours -->
-  <section id="schedule" class="section-container">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">CALENDAR</span>
-        <h2 class="section-title">Practice & Lab Hours</h2>
-        <p class="section-desc">All practices and official matches take place in the CCHS Esports Computer Lab.</p>
-      </div>
-
-      <div class="schedule-wrapper">
-        <div class="schedule-info-box">
-          <div class="info-badge">📍 LOCATION</div>
-          <h3>CCHS Esports Lab</h3>
-          <p><strong>Room:</strong> CCHS Computer Lab (Check with Coach Mendez)</p>
-          <p><strong>Open Hours:</strong> After school from 3:45 PM – 5:30 PM</p>
-          <hr class="divider">
-          <p class="note-text">⚠️ <em>Players must report immediately after the bell. Grade checks are performed bi-weekly.</em></p>
         </div>
 
-        <div class="schedule-table-card">
-          <table class="schedule-table">
+        <div class="quick-actions">
+          <a href="#join" class="btn btn-primary">Interest Form & Signups</a>
+          <a href="#schedule" class="btn btn-secondary">View Weekly Schedule</a>
+        </div>
+      </section>
+
+      <!-- Section: Competitive Titles -->
+      <section id="games" class="doc-section">
+        <div class="section-title-group">
+          <h2>🎮 Active Game Titles</h2>
+          <span class="section-badge">Fall & Spring Seasons</span>
+        </div>
+        <p class="section-intro-text">
+          Our teams compete against high schools throughout the valley and Southern California.
+        </p>
+
+        <div class="cards-grid">
+          <!-- Smash -->
+          <div class="notion-card">
+            <div class="card-header">
+              <span class="pill pill-blue">Nintendo Switch</span>
+              <span class="pill pill-silver">Tuesdays</span>
+            </div>
+            <h3>Super Smash Bros. Ultimate</h3>
+            <p>1v1 competitive singles and 3v3 crew battle tournaments. Fast-paced platform fighter focusing on spacing, neutral game, and stage control.</p>
+            <div class="card-footer">
+              <span><strong>League:</strong> DVEA / High School Series</span>
+            </div>
+          </div>
+
+          <!-- Rocket League -->
+          <div class="notion-card">
+            <div class="card-header">
+              <span class="pill pill-blue">Cross-Platform</span>
+              <span class="pill pill-silver">Wednesdays</span>
+            </div>
+            <h3>Rocket League</h3>
+            <p>3v3 vehicular soccer. High-speed coordination, aerial rotation, precision passing, and rapid on-the-fly communication.</p>
+            <div class="card-footer">
+              <span><strong>League:</strong> DVEA / CIF Regional</span>
+            </div>
+          </div>
+
+          <!-- Tactical / Valorant -->
+          <div class="notion-card">
+            <div class="card-header">
+              <span class="pill pill-blue">PC</span>
+              <span class="pill pill-silver">Thursdays</span>
+            </div>
+            <h3>Valorant</h3>
+            <p>5v5 tactical shooter. Coordinated team strategies, utility usage, communication, and disciplined site defense.</p>
+            <div class="card-footer">
+              <span><strong>League:</strong> Scholastic High School Circuit</span>
+            </div>
+          </div>
+
+          <!-- Club Titles -->
+          <div class="notion-card">
+            <div class="card-header">
+              <span class="pill pill-silver">Community & Casual</span>
+              <span class="pill pill-silver">Mon / Fri</span>
+            </div>
+            <h3>Club Games & Casual Play</h3>
+            <p>Mario Kart, fighting games, and rotating community titles. A welcoming space for casual players, scrims, and friendly bracket nights.</p>
+            <div class="card-footer">
+              <span><strong>Format:</strong> In-House & Open Lab</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Schedule & Lab Hours -->
+      <section id="schedule" class="doc-section">
+        <div class="section-title-group">
+          <h2>📅 Lab Hours & Weekly Schedule</h2>
+        </div>
+        
+        <div class="callout callout-neutral">
+          <div class="callout-icon">📍</div>
+          <div class="callout-body">
+            <strong>Location:</strong> CCHS Esports Computer Lab • <strong>Time:</strong> 3:45 PM – 5:30 PM (Mon – Fri)
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="clean-table">
             <thead>
               <tr>
-                <th>Day</th>
-                <th>Activity</th>
-                <th>Time</th>
+                <th style="width: 20%;">Day</th>
+                <th style="width: 50%;">Focus & Title</th>
+                <th style="width: 30%;">Time</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Monday</strong></td>
-                <td>Open Lab & VOD Review / Strategy</td>
+                <td>Open Lab, Strategy Sessions & VOD Review</td>
                 <td>3:45 PM – 5:15 PM</td>
               </tr>
               <tr>
                 <td><strong>Tuesday</strong></td>
-                <td>Super Smash Bros. Match Day & Practice</td>
+                <td><span class="tag-blue">Smash Bros.</span> Match Day & Team Practice</td>
                 <td>3:45 PM – 5:30 PM</td>
               </tr>
               <tr>
                 <td><strong>Wednesday</strong></td>
-                <td>Rocket League Match Day & Practice</td>
+                <td><span class="tag-blue">Rocket League</span> Match Day & Scrimmages</td>
                 <td>3:45 PM – 5:30 PM</td>
               </tr>
               <tr>
                 <td><strong>Thursday</strong></td>
-                <td>Valorant Match Day & Scrims</td>
+                <td><span class="tag-blue">Valorant</span> Match Day & Strategy</td>
                 <td>3:45 PM – 5:30 PM</td>
               </tr>
               <tr>
                 <td><strong>Friday</strong></td>
-                <td>Team Meeting & Club Play</td>
+                <td>Club Gaming, Casual Play & Community Tournaments</td>
                 <td>3:45 PM – 4:45 PM</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
+      </section>
+
+      <!-- Section: Eligibility -->
+      <section id="eligibility" class="doc-section">
+        <div class="section-title-group">
+          <h2>📋 Standards & Eligibility</h2>
+        </div>
+        <p class="section-intro-text">
+          Esports athletes represent Cathedral City High School and are subject to the same student-athlete requirements as traditional sports.
+        </p>
+
+        <div class="rules-container">
+          <div class="rule-box">
+            <h3>🎓 Academic Standards</h3>
+            <ul class="clean-list">
+              <li>Must maintain a minimum <strong>2.0 GPA</strong> with no failing grades (no Fs).</li>
+              <li>Bi-weekly grade checks are required to stay on active rosters.</li>
+              <li>Tutoring and academic assistance are available before match times.</li>
+              <li>Regular school attendance: unexcused absences on match days result in benching.</li>
+            </ul>
+          </div>
+
+          <div class="rule-box">
+            <h3>🤝 Code of Conduct & Sportsmanship</h3>
+            <ul class="clean-list">
+              <li>Strict zero-tolerance policy for toxicity, harassment, rage-quitting, or offensive language in-game or voice chat.</li>
+              <li>Adherence to PSUSD Student Code of Conduct at all times.</li>
+              <li>Respect coaches, teammates, opponents, and match officials. Win with humility, lose with class.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Join / Contact -->
+      <section id="join" class="doc-section">
+        <div class="callout callout-join">
+          <div class="callout-icon">🚀</div>
+          <div class="callout-body">
+            <h3>Ready to Join the Team?</h3>
+            <p>We are recruiting competitive players for all titles, as well as team managers, shoutcasters, stream producers, and graphic designers.</p>
+            <div class="cta-row">
+              <a href="#" class="btn btn-primary" id="interestFormBtn">Complete the Interest Form</a>
+              <span class="coach-contact">Or visit <strong>Coach Mendez</strong> in the Computer Lab after school.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
-  <!-- Eligibility & Expectations -->
-  <section id="eligibility" class="section-container bg-surface">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">STANDARDS</span>
-        <h2 class="section-title">Player Eligibility & Expectations</h2>
-        <p class="section-desc">To represent Cathedral City High School, all players must meet district athletic requirements.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="rule-card">
-          <h3>📋 Academic Requirements</h3>
-          <ul>
-            <li>Maintain a minimum <strong>2.0 GPA</strong> with no failing grades (no Fs).</li>
-            <li>Regular school attendance is mandatory—no unexcused absences on match days.</li>
-            <li>Complete mandatory academic grade checks throughout the season.</li>
-          </ul>
-        </div>
-        <div class="rule-card">
-          <h3>🎮 Conduct & Sportsmanship</h3>
-          <ul>
-            <li>Zero tolerance for toxicity, rage-quitting, or disrespectful behavior in-game or in voice chat.</li>
-            <li>Adhere to the PSUSD Student Code of Conduct at all times.</li>
-            <li>Respect teammates, opponents, coaches, and match officials (GGs win or lose).</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Join / Contact -->
-  <section id="join" class="section-container">
-    <div class="container">
-      <div class="cta-banner">
-        <span class="section-tag">GET INVOLVED</span>
-        <h2>Ready to Represent CCHS?</h2>
-        <p>Whether you're looking to compete on a varsity team, play casually with friends, or help with broadcasting and graphic design, there is a place for you.</p>
-        
-        <div class="action-buttons">
-          <a href="#join" class="btn btn-primary" id="interestFormBtn">Fill Out Interest Form</a>
-          <a href="#about" class="btn btn-secondary">Contact Coach Mendez</a>
-        </div>
-
-        <div class="contact-subtext">
-          <p>Advisor / Coach: <strong>Mr. Mario Mendez</strong></p>
-          <p>Cathedral City High School | Palm Springs Unified School District</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Clean Footer -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="currentYear"></span> Cathedral City High School Esports. All rights reserved.</p>
-      <p class="footer-sub">Built for CCHS Lions Esports • Hosted on GitHub Pages</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/cchs-logo.png" alt="CCHS Lion" class="footer-logo">
+        <div>
+          <strong>Cathedral City High School Esports</strong>
+          <p>Palm Springs Unified School District</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Advisor / Coach: <strong>Mr. Mario Mendez</strong></p>
+        <p class="copyright">&copy; <span id="currentYear"></span> CCHS Lions Esports</p>
+      </div>
     </div>
   </footer>
 
