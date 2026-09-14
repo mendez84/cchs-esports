@@ -501,31 +501,117 @@ body {
 /* Cards Grid (Games) */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
 
 .apple-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 26px;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
   box-shadow: var(--shadow-card);
-  transition: var(--transition-smooth);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  cursor: default;
 }
 
-.apple-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+.apple-card:hover,
+.apple-card:focus-visible,
+.apple-card.is-hovered {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -8px rgba(0, 31, 63, 0.16), 0 0 0 1px rgba(0, 113, 227, 0.35);
+  border-color: rgba(0, 113, 227, 0.45);
+  outline: none;
+}
+
+/* Card Image Header & Micro-Interactions */
+.card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #09111e;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.001);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+}
+
+.apple-card:hover .card-img,
+.apple-card:focus-visible .card-img,
+.apple-card.is-hovered .card-img {
+  transform: scale(1.08);
+  filter: brightness(1.06) contrast(1.03);
+}
+
+/* Diagonal Sheen Reflection on Hover */
+.card-media-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 35%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 65%,
+    transparent 100%
+  );
+  transform: translateX(-150%);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-card:hover .card-media-shine,
+.apple-card:focus-visible .card-media-shine,
+.apple-card.is-hovered .card-media-shine {
+  transform: translateX(100%);
+}
+
+.card-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .badge-platform {
@@ -562,6 +648,7 @@ body {
 .card-meta {
   border-top: 1px solid var(--border-subtle);
   padding-top: 12px;
+  margin-top: auto;
   display: flex;
   gap: 6px;
   font-size: 0.82rem;
@@ -917,3 +1004,29 @@ body {
   border: 1px dashed var(--cchs-blue);
   background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
 }
+
+/* W3C & WCAG Accessibility: Respect Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .apple-card:hover,
+  .apple-card:focus-visible {
+    transform: none !important;
+  }
+
+  .card-img {
+    transform: none !important;
+  }
+
+  .card-media-shine {
+    display: none !important;
+  }
+}
+
