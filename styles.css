@@ -48,6 +48,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,6 +58,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Accessibility */
@@ -139,6 +141,7 @@ body {
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .brand-divider {
@@ -150,6 +153,7 @@ body {
   color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -179,10 +183,16 @@ body {
   padding: 6px 16px;
   border-radius: var(--radius-pill);
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .nav-btn-cta:hover {
   background-color: var(--cchs-blue-dark);
+}
+
+/* Mobile Subnav (Hidden on Desktop, active <= 680px) */
+.mobile-subnav {
+  display: none;
 }
 
 /* Buttons (Apple Style) */
@@ -1045,12 +1055,57 @@ body {
 }
 
 @media (max-width: 680px) {
+  .header-container {
+    padding: 8px 16px 6px;
+  }
+
+  .brand-divider,
+  .brand-school {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 0.98rem;
+  }
+
   .nav-menu {
-    gap: 12px;
+    gap: 8px;
   }
 
   .nav-anchor {
     display: none;
+  }
+
+  /* Compact Mobile Subnavigation Bar */
+  .mobile-subnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 16px 7px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-subnav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+  }
+
+  .mobile-subnav-link:active,
+  .mobile-subnav-link:hover {
+    color: var(--cchs-blue);
+    background-color: var(--cchs-blue-tint);
+  }
+
+  .mobile-subnav-dot {
+    color: var(--border-subtle);
+    font-size: 0.6rem;
   }
 
   .hero-headline {
@@ -1064,6 +1119,36 @@ body {
   .footer-top, .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 8px 12px 6px;
+  }
+
+  .brand-divider,
+  .brand-school {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 0.96rem;
+  }
+
+  .nav-btn-cta {
+    padding: 5px 12px;
+    font-size: 0.78rem;
+  }
+
+  .mobile-subnav {
+    gap: 4px;
+    padding: 4px 8px 6px;
+  }
+
+  .mobile-subnav-link {
+    font-size: 0.75rem;
+    padding: 3px 8px;
   }
 }
 
